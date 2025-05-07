@@ -17,16 +17,14 @@ The original dataset used in this project is available at:
 
 ## 🗂️ Folder Structure
 
-
 Global_Fashion_Retail_DW_Project/
-├── datasets/ # Raw flat files (CSV, TXT) 
-├── Scripts/ # SQL scripts for DB objects and ETL 
-├── SSIS/ # SSIS packages (.dtsx, .sln, etc.)
-├── report/ # Project report (PDF or DOCX)
-├── docs/ # Diagrams or additional docs
-├── .gitignore
-└── README.md
-
+├── datasets/                # Raw flat files (CSV, TXT)
+├── Scripts/                 # SQL scripts for DB objects and ETL
+├── SSIS/                    # SSIS packages (.dtsx, .sln, etc.)
+├── report/                  # Project report (PDF or DOCX)
+├── docs/                    # Diagrams or additional docs
+├── .gitignore               # Git ignore file
+└── README.md                # Project description and documentation
 ## 🔗 Data Sources
 
 ### 🗄️ Source Database: `Global_Fashion_Retail_Sales_SourceDB`
