@@ -7,7 +7,7 @@ This project is developed as part of the **Data Warehousing and Business Intelli
 To build a structured and efficient Data Warehouse (DW) that consolidates sales, customer, and product data from multiple sources, enabling data analysis and business intelligence reporting.
 
 ### Solution Architecture
-![Solution Architecture](doc\Solution Architecture.png)
+!([doc\Solution Architecture.png](https://github.com/Imashi79/SSIS-Datawarehouse-project/blob/main/doc/Solution%20Architecture.png))
 
 ## 📥 Dataset Source
 
