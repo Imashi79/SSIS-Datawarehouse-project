@@ -1,0 +1,265 @@
+Employee ID,Store ID,Name,Position
+5,1,Ryan Gross,Sales Associate
+6,1,Jeffery Carlson,Sales Associate
+7,1,Melissa Wilson,Sales Associate
+8,1,Edward Hicks,Sales Associate
+9,1,Shari Jordan,Sales Associate
+10,1,Mrs. Melissa Caldwell DDS,Sales Associate
+11,1,Regina Nelson,Junior Sales Associate
+12,1,Kevin Dawson,Senior Sales Associate
+13,1,Nicole Murphy,Sales Associate
+18,2,David Pitts,Sales Associate
+19,2,Lance Schultz,Sales Associate
+20,2,Caroline Hall,Sales Associate
+21,2,Heather Wilson,Sales Associate
+22,2,Allison Young,Sales Associate
+23,2,Kathleen Thomas,Sales Associate
+24,2,Carl Walters,Sales Associate
+29,3,Cynthia Serrano,Sales Associate
+30,3,Brittany Gonzalez,Sales Associate
+31,3,Patrick Simmons,Sales Associate
+32,3,Jennifer Johnson,Sales Associate
+33,3,Lynn Torres,Sales Associate
+34,3,Adam Long,Sales Associate
+35,3,Christopher Willis,Sales Associate
+36,3,Zachary Leonard,Sales Associate
+41,4,Jonathan Cooley,Sales Associate
+42,4,Christine Garner,Sales Associate
+43,4,Joshua Sharp,Sales Associate
+44,4,Laura Whitehead,Sales Associate
+45,4,Jeremy Wolfe,Sales Associate
+46,4,Denise Harmon,Sales Associate
+47,4,Allen Fischer,Sales Associate
+48,4,Robert Price,Sales Associate
+49,4,Victoria Parker,Sales Associate
+54,5,Ronald Shannon,Sales Associate
+55,5,Kayla Hernandez,Sales Associate
+56,5,Ariel Morse,Sales Associate
+57,5,Kevin Stevens,Sales Associate
+58,5,Austin Bonilla,Sales Associate
+59,5,Larry Gutierrez,Sales Associate
+60,5,John Garza,Sales Associate
+61,5,Ruth Smith,Sales Associate
+66,6,莫凤英,Sales Associate
+67,6,农健,Sales Associate
+68,6,罗彬,Sales Associate
+69,6,梁欣,Sales Associate
+70,6,蒋坤,Sales Associate
+71,6,李淑英,Sales Associate
+72,6,黄想,Sales Associate
+77,7,孔桂香,Sales Associate
+78,7,杨琳,Sales Associate
+79,7,黄华,Sales Associate
+80,7,何兰英,Sales Associate
+81,7,张杰,Sales Associate
+82,7,应小红,Sales Associate
+83,7,林淑英,Sales Associate
+84,7,唐旭,Sales Associate
+85,7,刘宁,Sales Associate
+90,8,胡秀云,Sales Associate
+91,8,周秀兰,Sales Associate
+92,8,汤建华,Sales Associate
+93,8,夏艳,Sales Associate
+94,8,杨凤英,Sales Associate
+95,8,李建国,Sales Associate
+96,8,李玉兰,Sales Associate
+97,8,郑琳,Sales Associate
+98,8,郭海燕,Sales Associate
+103,9,陈淑英,Sales Associate
+104,9,刘宁,Sales Associate
+105,9,许冬梅,Senior Sales Associate
+106,9,胡婷,Senior Sales Associate
+107,9,易玉,Sales Associate
+108,9,林玉,Junior Sales Associate
+109,9,詹淑华,Sales Associate
+110,9,岳金凤,Junior Sales Associate
+115,10,梁秀云,Sales Associate
+116,10,李玲,Sales Associate
+117,10,王柳,Senior Sales Associate
+118,10,贾淑英,Sales Associate
+119,10,查帅,Sales Associate
+120,10,刘宁,Sales Associate
+121,10,刘阳,Junior Sales Associate
+122,10,王建平,Junior Sales Associate
+123,10,童淑英,Sales Associate
+128,11,Desiree Warmer-Wähner,Senior Sales Associate
+129,11,Reingard Jacobi Jäckel,Sales Associate
+130,11,Univ.Prof. Ditmar Scheuermann B.Eng.,Sales Associate
+131,11,Frieda Geisler,Junior Sales Associate
+132,11,Herr Hellmut Kraus,Junior Sales Associate
+133,11,Hannes Biggen,Sales Associate
+134,11,Meinhard Linke,Junior Sales Associate
+135,11,Isabelle Hauffer,Sales Associate
+140,12,Dr. Diane Oestrovsky,Sales Associate
+141,12,Wanda Stumpf,Junior Sales Associate
+142,12,Dagmar Dehmel-Kusch,Senior Sales Associate
+143,12,Harold Preiß,Junior Sales Associate
+144,12,Heike Römer,Junior Sales Associate
+145,12,Elisa Junck B.Sc.,Sales Associate
+146,12,Dr. Anita Seifert MBA.,Sales Associate
+147,12,Pero Birnbaum B.A.,Sales Associate
+148,12,Ellen Etzler,Sales Associate
+153,13,Valeri Gute,Junior Sales Associate
+154,13,Gunnar Kambs,Junior Sales Associate
+155,13,Stjepan Adler B.Eng.,Senior Sales Associate
+156,13,Univ.Prof. Reinald Becker MBA.,Senior Sales Associate
+157,13,Inka Etzold B.A.,Junior Sales Associate
+158,13,Gülten Sauer B.Eng.,Sales Associate
+159,13,Rosina Albers,Sales Associate
+160,13,Kathleen Kobelt B.A.,Sales Associate
+165,14,Dipl.-Ing. Andree Lindau B.A.,Sales Associate
+166,14,Tatjana Rudolph,Senior Sales Associate
+167,14,Jenny Ritter,Junior Sales Associate
+168,14,Maya Mangold B.Sc.,Senior Sales Associate
+169,14,Bärbel Reising B.A.,Junior Sales Associate
+170,14,Ing. Eckehard Stahr,Senior Sales Associate
+171,14,Prof. Tilo Zirme B.A.,Sales Associate
+176,15,Baptist Girschner,Sales Associate
+177,15,Aloisia Schlosser B.A.,Sales Associate
+178,15,Univ.Prof. Hans-Theo Möchlichen,Senior Sales Associate
+179,15,Albin Henck MBA.,Sales Associate
+180,15,Dr. Friedrich-Wilhelm Linke MBA.,Junior Sales Associate
+181,15,Rosl Budig,Junior Sales Associate
+182,15,Miguel Junk,Junior Sales Associate
+183,15,Jonas Rosemann,Senior Sales Associate
+184,15,Helmut Paffrath,Sales Associate
+189,16,Angela Chapman,Sales Associate
+190,16,Annette Morgan,Sales Associate
+191,16,Christina Mccarthy,Junior Sales Associate
+192,16,Kristina Mitchell,Senior Sales Associate
+193,16,Sylvia Austin,Junior Sales Associate
+194,16,Brent Oneill,Senior Sales Associate
+199,17,Jonathan Ryan,Sales Associate
+200,17,Mary Lee,Sales Associate
+201,17,Adam Lopez,Sales Associate
+202,17,Laura Bradley,Senior Sales Associate
+203,17,Laura Baldwin,Sales Associate
+204,17,Karla Rasmussen,Sales Associate
+205,17,Michael Valenzuela,Senior Sales Associate
+206,17,Paul Kemp,Sales Associate
+211,18,Lisa Jimenez,Junior Sales Associate
+212,18,Allison Taylor,Sales Associate
+213,18,Jonathan Hill,Senior Sales Associate
+214,18,Christina Cisneros,Sales Associate
+215,18,Sarah Moreno,Senior Sales Associate
+216,18,Jake Moore,Sales Associate
+221,19,Brenda Williams,Sales Associate
+222,19,Michael Gardner,Junior Sales Associate
+223,19,Bob Hoffman,Sales Associate
+224,19,Nicole Rice,Junior Sales Associate
+225,19,Maria Hunter,Sales Associate
+226,19,David Hartman,Sales Associate
+227,19,Cheyenne Mann,Sales Associate
+228,19,Monica Moran,Sales Associate
+233,20,Michael Clayton,Junior Sales Associate
+234,20,Austin Baker,Sales Associate
+235,20,Alexander Baker MD,Junior Sales Associate
+236,20,Briana Moss,Sales Associate
+237,20,Sergio Hoover,Senior Sales Associate
+238,20,Angela Turner,Senior Sales Associate
+243,21,David Sauvage,Senior Sales Associate
+244,21,Philippe Ferrand-Nguyen,Sales Associate
+245,21,Virginie Sanchez,Sales Associate
+246,21,Robert Noël,Senior Sales Associate
+247,21,Matthieu Normand,Sales Associate
+248,21,Bernard Bertrand,Sales Associate
+253,22,Laurence Traore,Sales Associate
+254,22,Julien Da Silva,Senior Sales Associate
+255,22,Vincent Mary,Sales Associate
+256,22,Isaac Boulanger de la Laine,Sales Associate
+257,22,Josette Carre,Senior Sales Associate
+258,22,Franck Marie,Sales Associate
+263,23,Dominique Pichon,Junior Sales Associate
+264,23,Guillaume Hebert,Junior Sales Associate
+265,23,René Robert,Sales Associate
+266,23,Patrick-Jacques Lemoine,Senior Sales Associate
+267,23,Adrien-Robert Simon,Sales Associate
+268,23,Luc Maillot,Sales Associate
+269,23,Alexandre Paris de la Pages,Sales Associate
+274,24,Charles Bertin,Junior Sales Associate
+275,24,Alexandria Renaud,Junior Sales Associate
+276,24,Claire Laurent-Benoit,Sales Associate
+277,24,Thibaut Lacombe du Guillaume,Senior Sales Associate
+278,24,Arthur Hamon,Sales Associate
+279,24,Éléonore Gilles de Adam,Sales Associate
+280,24,Robert Guilbert,Sales Associate
+285,25,Capucine Rousseau,Sales Associate
+286,25,Christine Lopez-Bègue,Junior Sales Associate
+287,25,Maurice Leduc-Picard,Senior Sales Associate
+288,25,Alice Lagarde,Junior Sales Associate
+289,25,Hélène Marchand-Lelièvre,Sales Associate
+290,25,Astrid Jourdan de Parent,Sales Associate
+291,25,Émile Schneider,Sales Associate
+292,25,Benjamin Dupuis,Sales Associate
+297,26,Anunciación Arnau,Sales Associate
+298,26,Danilo Vera Peiró,Junior Sales Associate
+299,26,José Manuel Valera-Villaverde,Senior Sales Associate
+300,26,Lourdes Cabañas,Sales Associate
+301,26,René Castell-Falcó,Sales Associate
+302,26,Dani de Alegria,Sales Associate
+307,27,Aurora del Mur,Sales Associate
+308,27,Augusto Montesinos Andrade,Sales Associate
+309,27,Urbano Jover Aznar,Sales Associate
+310,27,Pablo Villalonga,Sales Associate
+311,27,Antonia Paola Molins Ropero,Sales Associate
+312,27,Horacio de Pinedo,Sales Associate
+313,27,Jordán Carballo,Sales Associate
+314,27,Rolando Pagès Gargallo,Sales Associate
+319,28,Felipe Amorós Sánchez,Senior Sales Associate
+320,28,Renata Flores Bustos,Sales Associate
+321,28,Dionisio Yáñez,Sales Associate
+322,28,Aitor Lledó-Álamo,Manager
+323,28,Itziar Aguilera Puente,Sales Associate
+324,28,Emiliano Vázquez Moliner,Sales Associate
+329,29,Felisa Gaya Díaz,Sales Associate
+330,29,Felicia del Gomila,Sales Associate
+331,29,Armida Bou Ferrández,Senior Sales Associate
+332,29,Kike Blasco Ramis,Sales Associate
+333,29,Rafael Zurita Crespo,Sales Associate
+334,29,Primitivo Nogués Padilla,Senior Sales Associate
+335,29,Eusebia Manuel Mancebo,Sales Associate
+340,30,Tecla Jódar-Baquero,Junior Sales Associate
+341,30,Artemio Mate Ríos,Sales Associate
+342,30,Vinicio Barceló Marín,Senior Sales Associate
+343,30,Leonor Yuste Hoz,Sales Associate
+344,30,Laura Sánchez,Senior Sales Associate
+345,30,Claudio Lago,Sales Associate
+346,30,Jose Luis Acevedo Fuertes,Junior Sales Associate
+347,30,Artemio Roselló Calvet,Sales Associate
+352,31,Vitória Amorim,Sales Associate
+353,31,Érica Reis,Senior Sales Associate
+354,31,Isabela Cruz,Sales Associate
+355,31,Eduarda Assunção,Sales Associate
+356,31,Yasmin Pacheco-Rocha,Junior Sales Associate
+357,31,Jéssica Antunes-Ramos,Junior Sales Associate
+358,31,Vasco Costa,Junior Sales Associate
+359,31,Diego Araújo,Sales Associate
+360,31,Soraia Miranda,Sales Associate
+365,32,Fabiana Leite-Lima,Senior Sales Associate
+366,32,Jorge Morais,Sales Associate
+367,32,Afonso Cunha,Sales Associate
+368,32,Joaquim Valente,Sales Associate
+369,32,Fernando Vicente,Sales Associate
+370,32,Diogo Morais,Junior Sales Associate
+375,33,Daniela do Pires,Sales Associate
+376,33,Kyara Lima,Senior Sales Associate
+377,33,Eduarda Ribeiro,Sales Associate
+378,33,Bruno Santos,Sales Associate
+379,33,Vítor Henriques,Sales Associate
+380,33,Santiago Melo,Sales Associate
+381,33,Nelson Neto,Sales Associate
+382,33,Lourenço Nunes-Azevedo,Sales Associate
+387,34,Sofia Rocha-Rocha,Sales Associate
+388,34,Mário Ferreira,Sales Associate
+389,34,Tiago Figueiredo,Sales Associate
+390,34,Luciana Gonçalves,Sales Associate
+391,34,Guilherme Loureiro,Sales Associate
+392,34,Letícia Antunes,Sales Associate
+393,34,Leandro Jesus,Sales Associate
+394,34,Valentim Domingues,Sales Associate
+399,35,Kévim Figueiredo,Sales Associate
+400,35,Henrique Amaral,Sales Associate
+401,35,Brian Rocha,Sales Associate
+402,35,Matilde Campos,Sales Associate
+403,35,Emanuel Marques,Sales Associate
+404,35,Violeta Gonçalves,Sales Associate
