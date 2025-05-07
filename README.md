@@ -16,6 +16,7 @@ The original dataset used in this project is available at:
 🔗 [Global Fashion Retail Sales Dataset – Kaggle](https://www.kaggle.com/datasets/ricgomes/global-fashion-retail-stores-dataset)
 
 ## 🗂️ Folder Structure
+
 ```plaintext
 Global_Fashion_Retail_DW_Project/
 ├── datasets/                # Raw flat files (CSV, TXT)
@@ -25,7 +26,6 @@ Global_Fashion_Retail_DW_Project/
 ├── docs/                    # Diagrams or additional docs
 ├── .gitignore               # Git ignore file
 └── README.md                # Project description and documentation
-
 ```
 ## 🔗 Data Sources
 
