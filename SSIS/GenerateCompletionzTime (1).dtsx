@@ -1,0 +1,2648 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/26/2025 9:58:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPY"
+  DTS:CreatorName="LAPY\imash"
+  DTS:DTSID="{A268ADBF-858C-4AC3-AC17-2A7E9504DB67}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="3081"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{5022A5E9-5934-40D8-B930-FCA638CA3961}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D2292D26-1098-4D30-8FAC-C63E441384A9}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3081"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\imash\Documents\Campus\3rd sem 1\DWBI-assignment 1\completiontime\Completion_Time.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Invoice ID"
+              DTS:DTSID="{1D1756D8-037F-4C0D-9A3F-CA2A7F3C0AC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{11B2C209-3E5A-425B-A27C-4F4C35BA0916}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{17E1FB76-D0A0-4744-BF05-F039E03840A5}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3081"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\imash\Documents\Campus\3rd sem 1\DWBI-assignment 1\completiontime\Completion_Time.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{BC1F8311-4F1B-4F88-93F1-7B263A05E368}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="complete_time"
+              DTS:DTSID="{99E563E3-4448-4ACF-9F7F-716581CF8D37}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{580455E8-EDBD-486C-9F18-A832907F53DB}"
+      DTS:ObjectName="LAPY.Global Fashion Retail Sales -DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPY;Initial Catalog=Global Fashion Retail Sales -DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{580455E8-EDBD-486C-9F18-A832907F53DB}LAPY.Global Fashion Retail Sales -DW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -StagingDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4EB1609A-2FA4-4E71-B976-AE1F47E43AE2}"
+      DTS:ObjectName="LAPY.Global Fashion Retail Sales -StagingDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPY;Initial Catalog=Global Fashion Retail Sales -StagingDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{4EB1609A-2FA4-4E71-B976-AE1F47E43AE2}LAPY.Global Fashion Retail Sales -StagingDB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Calculate process Progress"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3D8A5913-F877-4DC8-810F-9F86EBA2390B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Calculate process Progress"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Calculate process Progress\Calculate Progress time"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculate Progress time"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Calculate process Progress\Calculate Progress time.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Calculate process Progress\Calculate Progress time.Inputs[Derived Column Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[accm_txn_create_time]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\Calculate Progress time.Inputs[Derived Column Input].Columns[Completetime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Completetime"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[Completetime]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Calculate process Progress\Calculate Progress time.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Output].Columns[progress]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Output].Columns[progress]"
+                      name="progress"
+                      precision="18"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,18,4)(((DT_R8)[DATEDIFF]("ss",#{Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[accm_txn_create_time]},#{Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[Completetime]})) / 3600.0)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,18,4)(((DT_R8)DATEDIFF("ss",accm_txn_create_time,Completetime)) / 3600.0)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Calculate process Progress\Calculate Progress time.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Calculate process Progress\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[TemporyFactTransactions]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TemporyFactTransactions]) [refTable]
+where [refTable].[KeyID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="KeyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Invoice ID" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Line" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Customer ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Product ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Size" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Color" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Unit Price" dataType="DT_NUMERIC" length="0" precision="8" scale="3" codePage="0"/&gt;&lt;referenceColumn name="Quantity" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Datekey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Discount" dataType="DT_NUMERIC" length="0" precision="6" scale="3" codePage="0"/&gt;&lt;referenceColumn name="Line Total" dataType="DT_NUMERIC" length="0" precision="8" scale="4" codePage="0"/&gt;&lt;referenceColumn name="Store ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Employee ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Currency" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Currency Symbol" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SKU" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Transaction Type" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Payment Method" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Invoice Total" dataType="DT_NUMERIC" length="0" precision="10" scale="3" codePage="0"/&gt;&lt;referenceColumn name="accm_txn_create_time" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="InsertDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ModifiedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Calculate process Progress\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Calculate process Progress\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Calculate process Progress\Lookup.Inputs[Lookup Input].Columns[KeyID]"
+                      cachedDataType="i4"
+                      cachedName="KeyID"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">KeyID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Calculate process Progress\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Invoice ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Invoice ID]"
+                      name="Invoice ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Invoice ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Line]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Line]"
+                      name="Line"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Line</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Customer ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Customer ID]"
+                      name="Customer ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Customer ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Product ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Product ID]"
+                      name="Product ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Product ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Size]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Size]"
+                      name="Size"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Size</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Color]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Color]"
+                      name="Color"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Color</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Unit Price]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Unit Price]"
+                      name="Unit Price"
+                      precision="8"
+                      scale="3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Unit Price</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Quantity</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Datekey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Datekey]"
+                      name="Datekey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Datekey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Discount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Discount]"
+                      name="Discount"
+                      precision="6"
+                      scale="3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Discount</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Line Total]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Line Total]"
+                      name="Line Total"
+                      precision="8"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Line Total</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Store ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Store ID]"
+                      name="Store ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Store ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Employee ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Employee ID]"
+                      name="Employee ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Employee ID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Currency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Currency]"
+                      name="Currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Currency</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Currency Symbol]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Currency Symbol]"
+                      name="Currency Symbol"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Currency Symbol</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[SKU]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[SKU]"
+                      name="SKU"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SKU</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Transaction Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Transaction Type]"
+                      name="Transaction Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Transaction Type</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Payment Method]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Payment Method]"
+                      name="Payment Method"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Payment Method</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Invoice Total]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Invoice Total]"
+                      name="Invoice Total"
+                      precision="10"
+                      scale="3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Invoice Total</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">accm_txn_create_time</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[InsertDate]"
+                      name="InsertDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">InsertDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ModifiedDate</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Calculate process Progress\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Calculate process Progress\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Calculate process Progress\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Calculate process Progress\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Transaction_completion_Time]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Calculate process Progress\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[KeyID]"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]"
+                      name="KeyID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[Completetime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Completetime]"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[Completetime]"
+                      name="Completetime"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[KeyID]"
+                      dataType="i4"
+                      name="KeyID" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Completetime]"
+                      dataType="dbTimeStamp"
+                      name="Completetime" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[KeyID]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[KeyID]"
+                      name="KeyID" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Completetime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Completetime]"
+                      name="Completetime" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Calculate process Progress\update completion and progress time"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="update completion and progress time"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactTransactions]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Calculate process Progress\update completion and progress time.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Line]"
+                      cachedDataType="i4"
+                      cachedName="Line"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Line]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Line]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Size]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Size"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Size]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Size]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Unit Price]"
+                      cachedDataType="numeric"
+                      cachedName="Unit Price"
+                      cachedPrecision="8"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Unit Price]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Unit Price]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Datekey]"
+                      cachedDataType="i4"
+                      cachedName="Datekey"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Datekey]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Datekey]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Discount]"
+                      cachedDataType="numeric"
+                      cachedName="Discount"
+                      cachedPrecision="6"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Discount]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Discount]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Line Total]"
+                      cachedDataType="numeric"
+                      cachedName="Line Total"
+                      cachedPrecision="8"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Line Total]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Line Total]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Currency"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Currency]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Currency Symbol]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Currency Symbol"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Currency Symbol]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Currency Symbol]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[SKU]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SKU"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[SKU]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[SKU]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Transaction Type]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Transaction Type"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Transaction Type]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Transaction Type]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Payment Method]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Payment Method"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Payment Method]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Payment Method]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Invoice Total]"
+                      cachedDataType="numeric"
+                      cachedName="Invoice Total"
+                      cachedPrecision="10"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Invoice Total]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Invoice Total]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[accm_txn_create_time]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[accm_txn_create_time]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[progress]"
+                      cachedDataType="numeric"
+                      cachedName="progress"
+                      cachedPrecision="18"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[txn_process_time_hours]"
+                      lineageId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Output].Columns[progress]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[InsertDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="InsertDate"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[InsertDate]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[InsertDate]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Invoice ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Invoice ID"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Invoice ID]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Invoice ID]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Completetime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Completetime"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[Completetime]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[KeyID]"
+                      cachedDataType="i4"
+                      cachedName="KeyID"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[KeyID]"
+                      lineageId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Customer ID]"
+                      cachedDataType="i4"
+                      cachedName="Customer ID"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Customer ID]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Customer ID]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Product ID]"
+                      cachedDataType="i4"
+                      cachedName="Product ID"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Productn ID]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Store ID]"
+                      cachedDataType="i4"
+                      cachedName="Store ID"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Store ID]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Store ID]" />
+                    <inputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].Columns[Employee ID]"
+                      cachedDataType="i4"
+                      cachedName="Employee ID"
+                      externalMetadataColumnId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
+                      lineageId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output].Columns[Employee ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Invoice ID]"
+                      dataType="wstr"
+                      length="50"
+                      name="Invoice ID" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Line]"
+                      dataType="i4"
+                      name="Line" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Size]"
+                      dataType="wstr"
+                      length="50"
+                      name="Size" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="50"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Unit Price]"
+                      dataType="numeric"
+                      name="Unit Price"
+                      precision="8"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Datekey]"
+                      dataType="i4"
+                      name="Datekey" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Discount]"
+                      dataType="numeric"
+                      name="Discount"
+                      precision="6"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Line Total]"
+                      dataType="numeric"
+                      name="Line Total"
+                      precision="8"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
+                      dataType="wstr"
+                      length="10"
+                      name="Currency" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Currency Symbol]"
+                      dataType="wstr"
+                      length="10"
+                      name="Currency Symbol" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[SKU]"
+                      dataType="wstr"
+                      length="50"
+                      name="SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Transaction Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Transaction Type" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Payment Method]"
+                      dataType="wstr"
+                      length="50"
+                      name="Payment Method" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Invoice Total]"
+                      dataType="numeric"
+                      name="Invoice Total"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_complete_time" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[txn_process_time_hours]"
+                      dataType="numeric"
+                      name="txn_process_time_hours"
+                      precision="18"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      name="InsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[KeyID]"
+                      dataType="i4"
+                      name="KeyID" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Customer ID]"
+                      dataType="i4"
+                      name="Customer ID" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Productn ID]"
+                      dataType="i4"
+                      name="Productn ID" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Store ID]"
+                      dataType="i4"
+                      name="Store ID" />
+                    <externalMetadataColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
+                      dataType="i4"
+                      name="Employee ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Calculate process Progress\update completion and progress time.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\update completion and progress time.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Calculate process Progress\update completion and progress time.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Calculate process Progress\update completion and progress time.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Calculate process Progress.Paths[Derived Column Output]"
+              endId="Package\Calculate process Progress\update completion and progress time.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Calculate process Progress\Calculate Progress time.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Calculate process Progress.Paths[Lookup Match Output]"
+              endId="Package\Calculate process Progress\Calculate Progress time.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Calculate process Progress\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Calculate process Progress.Paths[OLE DB Source Output]"
+              endId="Package\Calculate process Progress\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Calculate process Progress\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Generate Completion Time SQL Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2F685BB2-16D5-4DF5-9A91-E86F38CDBB40}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Generate Completion Time SQL Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Generate Completion Time SQL Table.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{5020E3C5-EEF9-4711-9818-E1CBA377C83E}"
+          DTS:EventID="2007372904"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{C7FA8304-599C-4425-AF4E-1E1631F6B6B5}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Generate Completion Time SQL Table.EventHandlers[OnPreExecute]\Execute SQL Task"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{AD44C766-99FF-490F-9C43-40DF2F115513}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Execute SQL Task"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{580455E8-EDBD-486C-9F18-A832907F53DB}"
+                  SQLTask:SqlStatementSource="truncate table [dbo].[Transaction_completion_Time];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          autoAdjustBufferSize="true"
+          defaultBufferMaxRows="500000"
+          version="1">
+          <components>
+            <component
+              refId="Package\Generate Completion Time SQL Table\Balanced Data Distributor"
+              componentClassID="Microsoft.BDD"
+              contactInfo="Balanced Data Distributor;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Evaluates and directs rows in a dataset to multiple destinations."
+              name="Balanced Data Distributor">
+              <inputs>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]"
+                  description="Input to the Balanced Data      Distributor Transformation"
+                  name="Balanced Data Distributor Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  exclusionGroup="1"
+                  name="Balanced Data Distributor Output 1"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  exclusionGroup="1"
+                  name="Balanced Data Distributor Output 2"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 3]"
+                  deleteOutputOnPathDetached="true"
+                  exclusionGroup="1"
+                  name="Balanced Data Distributor Output 3"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 4]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  exclusionGroup="1"
+                  name="Balanced Data Distributor Output 4"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generate Completion Time SQL Table\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column.Inputs[Derived Column Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("MINUTE",5,#{Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("MINUTE",5,accm_txn_create_time)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generate Completion Time SQL Table\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1.Inputs[Derived Column Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("MINUTE",10,#{Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("MINUTE",10,accm_txn_create_time)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generate Completion Time SQL Table\Derived Column 1 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Inputs[Derived Column Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("MINUTE",15,#{Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("MINUTE",15,accm_txn_create_time)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generate Completion Time SQL Table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Transaction_completion_Time]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Completetime]"
+                      lineageId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[KeyID]"
+                      cachedDataType="i4"
+                      cachedName="KeyID"
+                      externalMetadataColumnId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[KeyID]"
+                      lineageId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[KeyID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[KeyID]"
+                      dataType="i4"
+                      name="KeyID" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Completetime]"
+                      dataType="dbTimeStamp"
+                      name="Completetime" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generate Completion Time SQL Table\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TemporyFactTransactions]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Generate Completion Time SQL Table\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPY.Global Fashion Retail Sales -DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[KeyID]"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]"
+                      name="KeyID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Invoice ID]"
+                      dataType="wstr"
+                      length="50"
+                      name="Invoice ID" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Line]"
+                      dataType="i4"
+                      name="Line" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer ID]"
+                      dataType="i4"
+                      name="Customer ID" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Product ID]"
+                      dataType="i4"
+                      name="Product ID" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Size]"
+                      dataType="wstr"
+                      length="50"
+                      name="Size" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="50"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Unit Price]"
+                      dataType="numeric"
+                      name="Unit Price"
+                      precision="8"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Datekey]"
+                      dataType="i4"
+                      name="Datekey" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
+                      dataType="numeric"
+                      name="Discount"
+                      precision="6"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Line Total]"
+                      dataType="numeric"
+                      name="Line Total"
+                      precision="8"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Store ID]"
+                      dataType="i4"
+                      name="Store ID" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Employee ID]"
+                      dataType="i4"
+                      name="Employee ID" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                      dataType="wstr"
+                      length="10"
+                      name="Currency" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Currency Symbol]"
+                      dataType="wstr"
+                      length="10"
+                      name="Currency Symbol" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SKU]"
+                      dataType="wstr"
+                      length="50"
+                      name="SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Transaction Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Transaction Type" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Payment Method]"
+                      dataType="wstr"
+                      length="50"
+                      name="Payment Method" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Invoice Total]"
+                      dataType="numeric"
+                      name="Invoice Total"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      name="InsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[KeyID]"
+                      dataType="i4"
+                      name="KeyID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[KeyID]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[KeyID]"
+                      name="KeyID" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generate Completion Time SQL Table\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 1].Columns[KeyID]"
+                      cachedDataType="i4"
+                      cachedName="KeyID"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[KeyID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 1].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 2].Columns[KeyID]"
+                      cachedDataType="i4"
+                      cachedName="KeyID"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[KeyID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 2].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 3].Columns[KeyID]"
+                      cachedDataType="i4"
+                      cachedName="KeyID"
+                      lineageId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[KeyID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[KeyID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 3].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[KeyID]"
+                      dataType="i4"
+                      lineageId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[KeyID]"
+                      name="KeyID" />
+                    <outputColumn
+                      refId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Balanced Data Distributor Output 1]"
+              endId="Package\Generate Completion Time SQL Table\Derived Column.Inputs[Derived Column Input]"
+              name="Balanced Data Distributor Output 1"
+              startId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 1]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Balanced Data Distributor Output 2]"
+              endId="Package\Generate Completion Time SQL Table\Derived Column 1.Inputs[Derived Column Input]"
+              name="Balanced Data Distributor Output 2"
+              startId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 2]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Balanced Data Distributor Output 3]"
+              endId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Inputs[Derived Column Input]"
+              name="Balanced Data Distributor Output 3"
+              startId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Outputs[Balanced Data Distributor Output 3]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Derived Column Output]"
+              endId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Generate Completion Time SQL Table\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Derived Column Output1]"
+              endId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Generate Completion Time SQL Table\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Derived Column Output2]"
+              endId="Package\Generate Completion Time SQL Table\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Generate Completion Time SQL Table\Derived Column 1 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[OLE DB Source Output]"
+              endId="Package\Generate Completion Time SQL Table\Balanced Data Distributor.Inputs[Balanced Data Distributor Input]"
+              name="OLE DB Source Output"
+              startId="Package\Generate Completion Time SQL Table\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Generate Completion Time SQL Table.Paths[Union All Output 1]"
+              endId="Package\Generate Completion Time SQL Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Generate Completion Time SQL Table\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9C02EAE1-E652-438E-BE65-9B57D2B95D2C}"
+      DTS:From="Package\Generate Completion Time SQL Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Calculate process Progress" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="205.333333333334,42.6666666666667"
+          Id="Package\Calculate process Progress"
+          TopLeft="139.374993769452,156.649992530346" />
+        <NodeLayout
+          Size="256,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table"
+          TopLeft="70.6249968428165,54.5999973964692" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="198.624996842817,97.2666640631359">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.4166635933022,59.3833284672101"
+              Start="0,0"
+              End="43.4166635933022,51.8833284672101">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.6916642336051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.6916642336051"
+                    Point2="0,29.6916642336051"
+                    Point3="4,29.6916642336051" />
+                  <mssgle:LineSegment
+                    End="39.4166635933022,29.6916642336051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.4166635933022,29.6916642336051"
+                    Point2="43.4166635933022,29.6916642336051"
+                    Point3="43.4166635933022,33.6916642336051" />
+                  <mssgle:LineSegment
+                    End="43.4166635933022,51.8833284672101" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Calculate process Progress">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113.333333333334,42.6666666666667"
+          Id="Package\Calculate process Progress\Lookup"
+          TopLeft="497.499977760018,125.449994018078" />
+        <NodeLayout
+          Size="254.666666666667,42.6666666666667"
+          Id="Package\Calculate process Progress\update completion and progress time"
+          TopLeft="695.62496890314,307.449985339642" />
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Calculate process Progress\OLE DB Source"
+          TopLeft="446.249980051071,30.5499985432625" />
+        <NodeLayout
+          Size="189.333333333334,42.6666666666667"
+          Id="Package\Calculate process Progress\Calculate Progress time"
+          TopLeft="600.624973149971,217.749989616871" />
+        <EdgeLayout
+          Id="Package\Calculate process Progress.Paths[OLE DB Source Output]"
+          TopLeft="521.583313384405,73.2166652099292">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="32.5833310422798,52.2333288081489"
+              Start="0,0"
+              End="32.5833310422798,44.7333288081489">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.1166644040744" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.1166644040744"
+                    Point2="0,26.1166644040744"
+                    Point3="4,26.1166644040744" />
+                  <mssgle:LineSegment
+                    End="28.5833310422798,26.1166644040744" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.5833310422798,26.1166644040744"
+                    Point2="32.5833310422798,26.1166644040744"
+                    Point3="32.5833310422798,30.1166644040744" />
+                  <mssgle:LineSegment
+                    End="32.5833310422798,44.7333288081489" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Calculate process Progress.Paths[Lookup Match Output]"
+          TopLeft="554.166644426684,168.116660684745">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.124995389953,49.6333289321265"
+              Start="0,0"
+              End="141.124995389953,42.1333289321265">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.8166644660632" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.8166644660632"
+                    Point2="0,24.8166644660632"
+                    Point3="4,24.8166644660632" />
+                  <mssgle:LineSegment
+                    End="137.124995389953,24.8166644660632" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.124995389953,24.8166644660632"
+                    Point2="141.124995389953,24.8166644660632"
+                    Point3="141.124995389953,28.8166644660632" />
+                  <mssgle:LineSegment
+                    End="141.124995389953,42.1333289321265" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.3711109762265,29.8166644660632,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Calculate process Progress.Paths[Derived Column Output]"
+          TopLeft="695.291639816638,260.416656283538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127.666662419836,47.0333290561041"
+              Start="0,0"
+              End="127.666662419836,39.5333290561041">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.516664528052" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.516664528052"
+                    Point2="0,23.516664528052"
+                    Point3="4,23.516664528052" />
+                  <mssgle:LineSegment
+                    End="123.666662419836,23.516664528052" />
+                  <mssgle:CubicBezierSegment
+                    Point1="123.666662419836,23.516664528052"
+                    Point2="127.666662419836,23.516664528052"
+                    Point3="127.666662419836,27.516664528052" />
+                  <mssgle:LineSegment
+                    End="127.666662419836,39.5333290561041" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Calculate process Progress\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TemporyFactTransactions]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Calculate process Progress\update completion and progress time">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Calculate process Progress\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Generate Completion Time SQL Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\OLE DB Source"
+          TopLeft="453.124982425943,37.6499981689453" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\Derived Column 1 1"
+          TopLeft="644.999980777503,308.666660527388" />
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\Union All"
+          TopLeft="460.99998626113,453.999986469746" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\Derived Column"
+          TopLeft="256.624988468364,309.349986840486" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\OLE DB Destination"
+          TopLeft="428.999987214804,537.999983966351" />
+        <NodeLayout
+          Size="200,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\Balanced Data Distributor"
+          TopLeft="423.999987363816,127.999996185303" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table\Derived Column 1"
+          TopLeft="434.99998703599,318.666660229365" />
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Union All Output 1]"
+          TopLeft="518.3333200713,496.666653136413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.3333308299383"
+              Start="0,0"
+              End="0,33.8333308299383">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8333308299383" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[OLE DB Source Output]"
+          TopLeft="526.229151561546,80.316664835612">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.683331349691"
+              Start="0,0"
+              End="0,40.183331349691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.183331349691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Derived Column Output2]"
+          TopLeft="722.333314110836,351.333327194055">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-172.333327849706,102.666659275691"
+              Start="0,0"
+              End="-172.333327849706,95.166659275691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.9725160866514" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.9725160866514"
+                    Point2="0,66.9725160866514"
+                    Point3="-4,66.9725160866514" />
+                  <mssgle:LineSegment
+                    End="-168.333327849706,66.9725160866514" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-168.333327849706,66.9725160866514"
+                    Point2="-172.333327849706,66.9725160866514"
+                    Point3="-172.333327849706,70.9725160866514" />
+                  <mssgle:LineSegment
+                    End="-172.333327849706,95.166659275691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Derived Column Output1]"
+          TopLeft="519.333319981893,361.333326896032">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,92.6666595737142"
+              Start="0,0"
+              End="0,85.1666595737142">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.1666595737142" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Derived Column Output]"
+          TopLeft="333.958321801698,352.016653507153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="159.374997792765,101.983332962593"
+              Start="0,0"
+              End="159.374997792765,94.4833329625929">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5267620042721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.5267620042721"
+                    Point2="0,66.5267620042721"
+                    Point3="4,66.5267620042721" />
+                  <mssgle:LineSegment
+                    End="155.374997792765,66.5267620042721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="155.374997792765,66.5267620042721"
+                    Point2="159.374997792765,66.5267620042721"
+                    Point3="159.374997792765,70.5267620042721" />
+                  <mssgle:LineSegment
+                    End="159.374997792765,94.4833329625929" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Balanced Data Distributor Output 3]"
+          TopLeft="571.999987363816,170.66666285197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="150.33332674702,137.999997675419"
+              Start="0,0"
+              End="150.33332674702,130.499997675419">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.210525520538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.210525520538"
+                    Point2="0,47.210525520538"
+                    Point3="4,47.210525520538" />
+                  <mssgle:LineSegment
+                    End="146.33332674702,47.210525520538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="146.33332674702,47.210525520538"
+                    Point2="150.33332674702,47.210525520538"
+                    Point3="150.33332674702,51.210525520538" />
+                  <mssgle:LineSegment
+                    End="150.33332674702,130.499997675419" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-2.65597334524001,52.210525520538,155.6452734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Balanced Data Distributor Output 2]"
+          TopLeft="520.499987199903,170.66666285197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,147.999997377396"
+              Start="0,0"
+              End="0,140.499997377396">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,140.499997377396" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-77.88611328125,64.445311188698,155.7722265625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generate Completion Time SQL Table.Paths[Balanced Data Distributor Output 1]"
+          TopLeft="475.999987363816,170.66666285197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142.041665562118,138.683323988517"
+              Start="0,0"
+              End="-142.041665562118,131.183323988517">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.4442950487032" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.4442950487032"
+                    Point2="0,47.4442950487032"
+                    Point3="-4,47.4442950487032" />
+                  <mssgle:LineSegment
+                    End="-138.041665562118,47.4442950487032" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-138.041665562118,47.4442950487032"
+                    Point2="-142.041665562118,47.4442950487032"
+                    Point3="-142.041665562118,51.4442950487032" />
+                  <mssgle:LineSegment
+                    End="-142.041665562118,131.183323988517" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-148.721399187309,52.4442950487032,155.4011328125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Generate Completion Time SQL Table.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Generate Completion Time SQL Table.EventHandlers[OnPreExecute]\Execute SQL Task"
+          TopLeft="197.99999409914,99.9999970197678" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Generate Completion Time SQL Table\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Generate Completion Time SQL Table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
