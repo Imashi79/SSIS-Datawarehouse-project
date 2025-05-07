@@ -1,0 +1,54 @@
+# Ignore SQL Server DB files
+*.bak
+*.mdf
+*.ldf
+*.ndf
+*.dbmdl
+
+# Ignore Visual Studio temporary files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+bin/
+obj/
+Debug/
+Release/
+
+# SSIS specific files
+*.dtsx.backup
+*.dtproj.user
+
+# Windows junk files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MacOS junk files
+.DS_Store
+
+# Logs
+*.log
+
+# Ignore reports from Report Server if used
+*.rdl.data
+*.rdl.cache
+*.rdl~*
+
+# Python or Jupyter (if used)
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# VS Code settings (optional)
+.vscode/
+
+# Project-specific exclusion
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.csv
+*.txt
