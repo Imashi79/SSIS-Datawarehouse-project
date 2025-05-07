@@ -2,32 +2,25 @@
 
 This project is developed as part of the **Data Warehousing and Business Intelligence** course. It involves designing and building a data warehouse system for a global fashion retail company using **SQL Server** and **SSIS**.
 
----
-
 ## 📌 Project Objective
 
 To build a structured and efficient Data Warehouse (DW) that consolidates sales, customer, and product data from multiple sources, enabling data analysis and business intelligence reporting.
 
----
-
-## Solution Architecture
-
-![alt text](<doc/Solution Architecture.png>)
-
+### Solution Architecture
+![Solution Architecture](docs/solution_architecture.png)
 
 ## 📥 Dataset Source
 
 The original dataset used in this project is available at:
 
-🔗 [Global Fashion Retail Sales Dataset – Kaggle ](https://www.kaggle.com/datasets/ricgomes/global-fashion-retail-stores-dataset)
-
----
+🔗 [Global Fashion Retail Sales Dataset – Kaggle](https://www.kaggle.com/datasets/ricgomes/global-fashion-retail-stores-dataset)
 
 ## 🗂️ Folder Structure
 
+
 Global_Fashion_Retail_DW_Project/
-├── datasets/ # Raw flat files (CSV, TXT)
-├── Scripts/ # SQL scripts for DB objects and ETL
+├── datasets/ # Raw flat files (CSV, TXT) 
+├── Scripts/ # SQL scripts for DB objects and ETL 
 ├── SSIS/ # SSIS packages (.dtsx, .sln, etc.)
 ├── report/ # Project report (PDF or DOCX)
 ├── docs/ # Diagrams or additional docs
