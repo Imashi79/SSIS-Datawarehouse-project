@@ -7,7 +7,7 @@ This project is developed as part of the **Data Warehousing and Business Intelli
 To build a structured and efficient Data Warehouse (DW) that consolidates sales, customer, and product data from multiple sources, enabling data analysis and business intelligence reporting.
 
 ### Solution Architecture
-![Solution Architecture](docs/solution_architecture.png)
+![Solution Architecture](doc\Solution Architecture.png)
 
 ## 📥 Dataset Source
 
