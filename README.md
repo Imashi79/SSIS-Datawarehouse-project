@@ -112,9 +112,9 @@ To preserve historical data and allow accurate analysis over time, selected dime
 
 ## 📊 Technologies Used
 
-- Microsoft SQL Server 2019
+- Microsoft SQL Server 2020
 - SQL Server Integration Services (SSIS)
 - T-SQL
-- Visual Studio 2019
+- Visual Studio 2022
 - Git & GitHub
 
