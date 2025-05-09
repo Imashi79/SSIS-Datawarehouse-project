@@ -37,7 +37,6 @@ Global_Fashion_Retail_DW_Project/
 - `Stores.csv`: Store metadata (Store name, city, ZIP, latitude, longitude, etc.)
 - `Country.txt`: Country reference data
 - `Customer_Location.txt`: Customer location details (Customer ID, city, country, etc.)
-- `products.csv`, `transactions.csv`, etc. (Include your actual file names here if different)
 
 ## 🏗️ Architecture
 
