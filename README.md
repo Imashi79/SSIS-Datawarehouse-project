@@ -1,6 +1,6 @@
 # 🛍️ Global Fashion Retail Sales Data Warehouse Project
 
-This project is developed as part of the **Data Warehousing and Business Intelligence** course. It involves designing and building a data warehouse system for a global fashion retail company using **SQL Server** and **SSIS**.
+This project is developed as part of the Data Warehousing and Business Intelligence course. It involves designing and building a data warehouse system using SQL Server and SSIS for a global fashion retail company.
 
 ## 📌 Project Objective
 
